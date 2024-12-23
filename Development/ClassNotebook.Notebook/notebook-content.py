@@ -13,7 +13,7 @@
 # CELL ********************
 
 import pandas as pd
-
+# Development Work is going on 
 EmployeeInfo = [
      [101,"Venkat",4545,"Chennai","MS Fabric"],
      [102,"Ramesh",232,"Bangalore","DAX"],
@@ -25,6 +25,7 @@ EmployeeInfo = [
      [108,"Jhansi",454,"Bangalore","DAX"]
 ]
 ColumnData = ['EmpId','EmpName','EmpSalary','EmpLocation','EmpCourse']
+# Here try to Create one Python Data Frame
 df = pd.DataFrame(data = EmployeeInfo,columns=ColumnData)
 display(df)
 
