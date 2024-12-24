@@ -44,21 +44,6 @@
                 "value": "Automatic"
               }
             ]
-          },
-          {
-            "name": "EmpSalary",
-            "dataType": "int64",
-            "sourceColumn": "EmpSalary",
-            "formatString": "0",
-            "sourceProviderType": "int",
-            "sourceLineageTag": "EmpSalary",
-            "summarizeBy": "sum",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ]
           }
         ],
         "partitions": [
