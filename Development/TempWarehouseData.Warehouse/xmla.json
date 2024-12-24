@@ -13,6 +13,74 @@
     "sourceQueryCulture": "en-US",
     "tables": [
       {
+        "name": "Dept",
+        "sourceLineageTag": "[dbo].[Dept]",
+        "columns": [
+          {
+            "name": "EmpId",
+            "dataType": "int64",
+            "sourceColumn": "EmpId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EmpId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EmpName",
+            "dataType": "string",
+            "sourceColumn": "EmpName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "EmpName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EmpSalary",
+            "dataType": "int64",
+            "sourceColumn": "EmpSalary",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EmpSalary",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Dept",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
         "name": "Employee",
         "sourceLineageTag": "[dbo].[Employee]",
         "columns": [
@@ -68,6 +136,74 @@
             "source": {
               "type": "entity",
               "entityName": "Employee",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "SalesInformatonData",
+        "sourceLineageTag": "[dbo].[SalesInformatonData]",
+        "columns": [
+          {
+            "name": "EmpId",
+            "dataType": "int64",
+            "sourceColumn": "EmpId",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EmpId",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EmpName",
+            "dataType": "string",
+            "sourceColumn": "EmpName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "EmpName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EmpSalary",
+            "dataType": "int64",
+            "sourceColumn": "EmpSalary",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EmpSalary",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "SalesInformatonData",
               "expressionSource": "DatabaseQuery",
               "schemaName": "dbo"
             }
